@@ -1,0 +1,33 @@
+{
+  "name": "motolaba-record",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.18.0 <25"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "dev": "vite --config web/vite.config.ts",
+    "dev:api": "node --env-file=.env --watch api/server.js",
+    "build": "tsc -p web && vite build --config web/vite.config.ts",
+    "start": "node --env-file=.env api/server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "2.12.0",
+    "express": "5.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-redux": "9.3.0",
+    "react-router": "8.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.3",
+    "vite": "8.3.5"
+  }
+}
