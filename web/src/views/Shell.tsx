@@ -13,7 +13,7 @@ export const Shell = () => {
   if (session.isError && !('status' in session.error && session.error.status === 401))
     return <main><p>No se pudo conectar con el taller.</p><button onClick={() => session.refetch()}>Reintentar</button></main>;
   if (!session.data || session.isError) return <main className="mx-auto mt-16 max-w-md">
-    <h1>Moto Lab EV</h1><FormPanel title="Acceso al taller" action="Entrar" save={data => login(String(data.get('key'))).unwrap()}>
+    <h1>Moto Lab EV Records</h1><FormPanel title="Acceso al taller" action="Entrar" save={data => login(String(data.get('key'))).unwrap()}>
       <label>Clave de operador<input name="key" type="password" autoComplete="current-password" required /></label>
     </FormPanel></main>;
   const leave = async () => {
@@ -21,7 +21,7 @@ export const Shell = () => {
     catch (error) { setNotice(messageOf(error)); }
   };
   return <><header><div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4">
-    <strong>Moto Lab EV</strong><nav aria-label="Principal">
+    <strong>Moto Lab EV Records</strong><nav aria-label="Principal">
       <NavLink to="/" end>Agenda</NavLink><NavLink to="/clientes">Clientes</NavLink><NavLink to="/vehiculos">Vehículos</NavLink>
     </nav><button onClick={leave}>Salir</button></div></header>
     <main className="mx-auto max-w-6xl"><span role="status">{notice}</span><Outlet /></main></>;

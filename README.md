@@ -1,4 +1,4 @@
-# Moto Lab EV Record
+# Moto Lab EV Records
 
 Proyecto inicializado por **Codex de OpenAI** para Luis Ronald Núñez Valdez, con el objetivo de **llevar a producción el registro operativo de Moto Lab EV**. Esta primera versión permite registrar clientes y vehículos, reservar citas y cancelar reservas con persistencia local. No hay registros de demostración ni credenciales predeterminadas.
 
